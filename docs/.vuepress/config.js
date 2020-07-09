@@ -1,68 +1,89 @@
+const highlight = require('./public/js/highlight')
+
 module.exports = {
-  base: '/vuepress-docs/',
-  head: [
-    [
-      'link',
-      {
-        rel: 'icon',
-        href: `/logo.png`
-      }
-    ],
+  title: '徐曙辉个人博客',
+  description: '徐曙辉个人博客',
+  host: 'localhost',
+  port: 3000,
+  base: '/',
+  dest: './dist',
+  plugins: [
+    'vuepress-plugin-medium-zoom',
+    ['vuepress-plugin-code-copy', {
+      align:"bottom",
+      color:"#3963bc",
+      successText:"复制成功~"
+    }]
   ],
-  title: 'IGeekFan的文档',
+  head: [
+    ['link', {
+      rel: 'icon',
+      href: '/favicon.ico'
+    }], ["script", {
+      async: true,
+      type: "text/javascript",
+      src: "https://s9.cnzz.com/z_stat.php?id=1279053128&web_id=1279053128"
+    }], ["script", {
+      async: true,
+      type: "text/javascript",
+      src: "https://hm.baidu.com/hm.js?8628fff92d16599a4cb40c15288bf5e3"
+    }]
+  ],
+  chainMarkdown(config) {
+    config
+      .options
+      .highlight(highlight)
+      .end()
+  },
   themeConfig: {
-    search: true,
-    searchMaxSuggestions: 10,
-    displayAllHeaders: true,
-    // 文档仓库
-    docsRepo: 'https://github.com/luoyunchong/vuepress-docs',
-    // 假如文档不是放在仓库的根目录下：
-    docsDir: 'vuepress-docs',
-    // 假如文档放在一个特定的分支下：
-    docsBranch: 'master',
-    // 默认是 false, 设置为 true 来启用
+    sidebarDepth: 0,
+    smoothScroll: true,
+    docsDir: 'docs',
     editLinks: true,
-    // 默认为 "Edit this page"
-    editLinkText: '在 GitHub 上编辑此页',
+    editLinkText: '纠正错误',
+    repo: "TaleLin/lin-ui-doc",
+    logo: '/images/left-logo.png',
     lastUpdated: '上次更新',
-    sidebarDepth: 2,
     nav: [
-      { text: '简介', link: '/' },
-      { text: 'lin-cms-dotnetcore起步', link: '/dotnetcore/lin-cms/' },
-      { text: 'ColorUI指南', link: '/colorui/docs/' },
-      { text: '关于我', link: 'http://blog.igeekfan.cn/about/' },
-      {
-        text: 'GitHub',
-        link: 'https://github.com/luoyunchong'
-      }],
+      { text: '基础知识', link: '/base/' },
+      { text: '编程语言', link: '/code/' },
+      { text: '数据库', link: '/database' },
+      { text: '书籍', link: '/book' },
+      
+      { text: '关于我', link: '/about/' },
+      {text: 'GitHub',link: 'https://github.com/xushuhui'}
+    ],
     sidebar: {
-      '/dotnetcore/lin-cms/': [{
-        title: 'lin-cms-dotnetcore',
+      '/base/': [{
+        title: '数据结构',
         collapsable: true,
         children: [
-          'dotnetcore-start.md',
-          'vue-start.md',
-          'pm-design-modules.md',
+          'datastruct/并查集',
+          'datastruct/最大堆',
+          'datastruct/AVL树',
         ]
       }, {
-        title: '开发者文档',
+        title: '网络协议',
         collapsable: true,
         children: [
-          'dev-start',
-          'dependency-injection',
-          'dynamic-authorization-in-asp-net-core',
-          'spa-github-login'
+          'network-protocol/传输层',
         ]
       }],
-      '/colorui/': [
+      '/code/': [
         {
-          title: 'ColorUI文档',
+          title: 'java',
           collapsable: true,
           children: [
-            'docs/button',
-            'docs/text',
+            'java/index',
           ]
-        }
+        },
+        {
+          title: 'php',
+          collapsable: true,
+          children: [
+            'php/index',
+          ]
+        },
       ],
     }
   }
