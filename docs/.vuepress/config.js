@@ -74,14 +74,14 @@ module.exports = {
           title: 'java',
           collapsable: true,
           children: [
-            'java/index',
+            '',
           ]
         },
         {
           title: 'php',
           collapsable: true,
           children: [
-            'php/index',
+            '',
           ]
         },
       ],
