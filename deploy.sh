@@ -13,12 +13,13 @@ yarn build
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
 #
+cd dist/
 git init
 git add -A
 git commit -m 'deploy'
 #
 
-# git remote add origin git@github.com:xushuhui/xushuhui.github.io.git
+git remote add origin git@github.com:xushuhui/xushuhui.github.io.git
 # git push -u origin master
 git push -f origin master
 

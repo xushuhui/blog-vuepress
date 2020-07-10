@@ -41,7 +41,6 @@ module.exports = {
     docsDir: 'docs',
     editLinks: true,
     editLinkText: '纠正错误',
-    repo: "TaleLin/lin-ui-doc",
     logo: '/images/left-logo.png',
     lastUpdated: '上次更新',
     nav: [
@@ -70,6 +69,23 @@ module.exports = {
         ]
       }],
       '/code/': [
+        {
+          title: 'go',
+          collapsable: true,
+          children: [
+            'go/go',
+          ]
+        },
+        {
+          title: 'node',
+          collapsable: true,
+          children: [
+            'node/node 新手课（0）项目介绍',
+            'node/node 新手课（1）nodejs 下载安装',
+            'node/node 新手课（2）Hello World',
+            'node/node 新手课（3）nodejs 和 javascript 区别',
+          ]
+        },
         {
           title: 'java',
           collapsable: true,
