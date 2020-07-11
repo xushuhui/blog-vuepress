@@ -41,7 +41,7 @@ module.exports = {
     docsDir: 'docs',
     editLinks: true,
     editLinkText: '纠正错误',
-    logo: '/images/left-logo.png',
+
     lastUpdated: '上次更新',
     nav: [
       { text: '基础知识', link: '/base/' },
@@ -69,21 +69,38 @@ module.exports = {
         ]
       }],
       '/code/': [
+       
+        {
+          title: 'node',
+          collapsable: true,
+          children: [
+            'node/node新手课（0）项目介绍',
+            'node/node新手课（1）nodejs 下载安装',
+            'node/node新手课（2）Hello World',
+            'node/node新手课（3）nodejs 和 javascript 区别',
+            'node/node新手课（4）nodejs处理http请求',
+            'node/node新手课（5）callback-promise和async-await',
+            'node/node新手课（6）项目需求分析和展示',
+            'node/node新手课（7）搭建项目，配置开发环境',
+            'node/node新手课（8）路由',
+            'node/node新手课（9）nodejs操作mysql',
+            'node/node新手课（10）nodejs操作redis',
+            'node/node新手课（11）微信小程序登录',
+            'node/node新手课（12）手机登录',
+            'node/node新手课（13）用户信息',
+            'node/node新手课（14）修改用户信息',
+            'node/node新手课（15）图片上传',
+            'node/node新手课（16）打卡',
+            'node/node新手课（17）点赞',
+            'node/node新手课（18）首页列表',
+            'node/node新手课（19）项目打包和部署',
+          ]
+        },
         {
           title: 'go',
           collapsable: true,
           children: [
             'go/go',
-          ]
-        },
-        {
-          title: 'node',
-          collapsable: true,
-          children: [
-            'node/node 新手课（0）项目介绍',
-            'node/node 新手课（1）nodejs 下载安装',
-            'node/node 新手课（2）Hello World',
-            'node/node 新手课（3）nodejs 和 javascript 区别',
           ]
         },
         {
