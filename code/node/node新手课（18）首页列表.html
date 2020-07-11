@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>node新手课（18）首页列表 | 徐曙辉个人博客</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/favicon.ico">
+    <script async="true" type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1279053128&amp;web_id=1279053128"></script>
+    <script async="true" type="text/javascript" src="https://hm.baidu.com/hm.js?8628fff92d16599a4cb40c15288bf5e3"></script>
+    <meta name="description" content="徐曙辉个人博客">
+    <link rel="preload" href="/assets/css/0.styles.627703cc.css" as="style"><link rel="preload" href="/assets/js/app.b93575be.js" as="script"><link rel="preload" href="/assets/js/7.c1403bbb.js" as="script"><link rel="preload" href="/assets/js/2.13016d13.js" as="script"><link rel="preload" href="/assets/js/30.eceaf55b.js" as="script"><link rel="prefetch" href="/assets/js/10.c4b3a89e.js"><link rel="prefetch" href="/assets/js/11.f55e6bd1.js"><link rel="prefetch" href="/assets/js/12.41f5a0f4.js"><link rel="prefetch" href="/assets/js/13.c9e77868.js"><link rel="prefetch" href="/assets/js/14.0cd9a6c8.js"><link rel="prefetch" href="/assets/js/15.2afcc1f4.js"><link rel="prefetch" href="/assets/js/16.0f4211d6.js"><link rel="prefetch" href="/assets/js/17.2bd93b30.js"><link rel="prefetch" href="/assets/js/18.2e21d6da.js"><link rel="prefetch" href="/assets/js/19.088bcd4e.js"><link rel="prefetch" href="/assets/js/20.9c606cbb.js"><link rel="prefetch" href="/assets/js/21.b35bf456.js"><link rel="prefetch" href="/assets/js/22.19aeed68.js"><link rel="prefetch" href="/assets/js/23.2c78cb99.js"><link rel="prefetch" href="/assets/js/24.ced6fdeb.js"><link rel="prefetch" href="/assets/js/25.9a3c92db.js"><link rel="prefetch" href="/assets/js/26.527dc37a.js"><link rel="prefetch" href="/assets/js/27.d0a7a8a5.js"><link rel="prefetch" href="/assets/js/28.525721e9.js"><link rel="prefetch" href="/assets/js/29.3307620a.js"><link rel="prefetch" href="/assets/js/3.70f5dd94.js"><link rel="prefetch" href="/assets/js/31.9ce9053b.js"><link rel="prefetch" href="/assets/js/32.ce68cae4.js"><link rel="prefetch" href="/assets/js/33.58c905f2.js"><link rel="prefetch" href="/assets/js/34.22b44160.js"><link rel="prefetch" href="/assets/js/35.c8a2ced2.js"><link rel="prefetch" href="/assets/js/36.ad52e6df.js"><link rel="prefetch" href="/assets/js/37.d32aae15.js"><link rel="prefetch" href="/assets/js/38.49876174.js"><link rel="prefetch" href="/assets/js/39.183b46b8.js"><link rel="prefetch" href="/assets/js/4.c49e2990.js"><link rel="prefetch" href="/assets/js/40.0588fdd3.js"><link rel="prefetch" href="/assets/js/41.c84e37e5.js"><link rel="prefetch" href="/assets/js/42.d49ca9f0.js"><link rel="prefetch" href="/assets/js/43.e87ef88b.js"><link rel="prefetch" href="/assets/js/44.3ce61a21.js"><link rel="prefetch" href="/assets/js/5.f768ba48.js"><link rel="prefetch" href="/assets/js/6.42e3e541.js"><link rel="prefetch" href="/assets/js/8.92c68f72.js"><link rel="prefetch" href="/assets/js/9.4177c335.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.627703cc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">徐曙辉个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/base/" class="nav-link">
+  基础知识
+</a></div><div class="nav-item"><a href="/code/" class="nav-link router-link-active">
+  编程语言
+</a></div><div class="nav-item"><a href="/database.html" class="nav-link">
+  数据库
+</a></div><div class="nav-item"><a href="/book.html" class="nav-link">
+  书籍
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于我
+</a></div><div class="nav-item"><a href="https://github.com/xushuhui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/base/" class="nav-link">
+  基础知识
+</a></div><div class="nav-item"><a href="/code/" class="nav-link router-link-active">
+  编程语言
+</a></div><div class="nav-item"><a href="/database.html" class="nav-link">
+  数据库
+</a></div><div class="nav-item"><a href="/book.html" class="nav-link">
+  书籍
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于我
+</a></div><div class="nav-item"><a href="https://github.com/xushuhui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>node</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/code/node/node新手课（0）项目介绍.html" class="sidebar-link">node 新手课（0）项目介绍</a></li><li><a href="/code/node/node新手课（1）nodejs 下载安装.html" class="sidebar-link">node 新手课（1）nodejs 下载安装</a></li><li><a href="/code/node/node新手课（2）Hello World.html" class="sidebar-link">node 新手课（2）Hello World</a></li><li><a href="/code/node/node新手课（3）nodejs 和 javascript 区别.html" class="sidebar-link">node 新手课（3）nodejs 和 javascript 区别</a></li><li><a href="/code/node/node新手课（4）nodejs处理http请求.html" class="sidebar-link">node新手课（4）nodejs处理http请求</a></li><li><a href="/code/node/node新手课（5）callback-promise和async-await.html" class="sidebar-link">node新手课（5）callback-promise和async-await</a></li><li><a href="/code/node/node新手课（6）项目需求分析和展示.html" class="sidebar-link">node新手课（6）项目需求分析和展示</a></li><li><a href="/code/node/node新手课（7）搭建项目，配置开发环境.html" class="sidebar-link">node新手课（7）搭建项目，配置开发环境</a></li><li><a href="/code/node/node新手课（8）路由.html" class="sidebar-link">node新手课（8）路由</a></li><li><a href="/code/node/node新手课（9）nodejs操作mysql.html" class="sidebar-link">node新手课（9）nodejs操作mysql</a></li><li><a href="/code/node/node新手课（10）nodejs操作redis.html" class="sidebar-link">node新手课（10）nodejs操作redis</a></li><li><a href="/code/node/node新手课（11）微信小程序登录.html" class="sidebar-link">node新手课（11）微信小程序登录</a></li><li><a href="/code/node/node新手课（12）手机登录.html" class="sidebar-link">node新手课（12）手机登录</a></li><li><a href="/code/node/node新手课（13）用户信息.html" class="sidebar-link">node新手课（13）用户信息</a></li><li><a href="/code/node/node新手课（14）修改用户信息.html" class="sidebar-link">node新手课（14）修改用户信息</a></li><li><a href="/code/node/node新手课（15）图片上传.html" class="sidebar-link">node新手课（15）图片上传</a></li><li><a href="/code/node/node新手课（16）打卡.html" class="sidebar-link">node新手课（16）打卡</a></li><li><a href="/code/node/node新手课（17）点赞.html" class="sidebar-link">node新手课（17）点赞</a></li><li><a href="/code/node/node新手课（18）首页列表.html" class="active sidebar-link">node新手课（18）首页列表</a></li><li><a href="/code/node/node新手课（19）项目打包和部署.html" class="sidebar-link">node新手课（19）项目打包和部署</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>go</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>java</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>php</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="node新手课（18）首页列表"><a href="#node新手课（18）首页列表" class="header-anchor">#</a> node新手课（18）首页列表</h1> <h2 id="简介"><a href="#简介" class="header-anchor">#</a> 简介</h2> <p>上节课我们讲了点赞，今天我们来讲查询首页列表。</p> <h2 id="需求"><a href="#需求" class="header-anchor">#</a> 需求</h2> <p>用户打卡小程序的首页就以列表的形式展示所有用户打卡发布的图片和内容。用户可以点赞某一条打卡。</p> <h2 id="功能流程"><a href="#功能流程" class="header-anchor">#</a> 功能流程</h2> <p>查询数据库中card表的所有记录，后期可以扩展加入分页或分类、标签等功能。</p> <h2 id="代码"><a href="#代码" class="header-anchor">#</a> 代码</h2> <blockquote><p>routes/index.js</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>router.get('/card', async (ctx, next) =&gt; {
+  return indexApi.getCard(ctx)
+})
+</code></pre></div><blockquote><p>api/index.js</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>const getCard = async(ctx) =&gt; {
+    const list = await cardModel.getCards()
+    ctx.body = resp.setData(list)
+    return
+}
+</code></pre></div><blockquote><p>model/cardmodel.js</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>const getCards = async()=&gt;{
+    let sql = &quot;select id,content,image from `card`&quot;
+    const res = await mysql.exec(sql) 
+    return res
+}
+</code></pre></div><h2 id="运行"><a href="#运行" class="header-anchor">#</a> 运行</h2> <div class="language- extra-class"><pre class="language-text"><code>POST http://localhost:3000/card
+
+{
+    &quot;content&quot;:&quot;content&quot;
+}
+</code></pre></div><p>响应数据</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;message&quot;: &quot;OK&quot;,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;content&quot;: &quot;111&quot;,
+            &quot;image&quot;: &quot;&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;content&quot;: &quot;13012341234&quot;,
+            &quot;image&quot;: &quot;https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1593516228269&amp;di=b24a61eb023e7b2d324c77921960d1f7&amp;imgtype=0&amp;src=http%3A%2F%2Fa3.att.hudong.com%2F14%2F75%2F01300000164186121366756803686.jpg&quot;
+        }
+    ]
+}
+</code></pre></div><h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>查询首页列表就讲完了，你掌握了吗？有问题欢迎到群里和志同道合的小伙伴一起交流。</p> <p>下节课我们讲解项目部署上线，继续加油吧，Let's go！</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">7/11/2020, 6:03:59 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/code/node/node新手课（17）点赞.html" class="prev">
+        node新手课（17）点赞
+      </a></span> <span class="next"><a href="/code/node/node新手课（19）项目打包和部署.html">
+        node新手课（19）项目打包和部署
+      </a>
+      →
+    </span></p></div> <img src="/assets/img/bottom-logo.385a53c5.png" style="position:absolute;width:135px;left:calc(100% / 2 + 50px);transform:translateX(-50%);"></main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.b93575be.js" defer></script><script src="/assets/js/7.c1403bbb.js" defer></script><script src="/assets/js/2.13016d13.js" defer></script><script src="/assets/js/30.eceaf55b.js" defer></script>
+  </body>
+</html>
