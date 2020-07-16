@@ -13,7 +13,19 @@ module.exports = {
       align:"bottom",
       color:"#3963bc",
       successText:"复制成功~"
-    }]
+    }],
+    '@vuepress/blog',{
+      directories: [
+        {
+          // Unique ID of current classification
+          id: 'post',
+          // Target directory
+          dirname: '_posts',
+          // Path of the `entry page` (or `list page`)
+          path: '/',
+        },
+      ],
+    },
   ],
   head: [
     ['link', {
@@ -46,7 +58,7 @@ module.exports = {
     nav: [
       { text: '基础知识', link: '/base/' },
       { text: '编程语言', link: '/code/' },
-      { text: '数据库', link: '/database' },
+      { text: '数据库', link: '/database/' },
       { text: '书籍', link: '/book' },
       
       { text: '关于我', link: '/about/' },
@@ -69,7 +81,6 @@ module.exports = {
         ]
       }],
       '/code/': [
-       
         {
           title: 'node',
           collapsable: true,
@@ -118,6 +129,18 @@ module.exports = {
           ]
         },
       ],
+      '/database/':[{
+          title: 'node',
+          collapsable: true,
+          children: [
+            'mysql/mysql基础（1）字段类型',
+            'mysql/mysql基础（2）存储引擎',
+            'mysql/mysql基础（3）事务',
+            'mysql/mysql基础（4）执行计划',
+            'mysql/mysql基础（5）索引'
+          ]
+      }
+      ]
     }
   }
 }
