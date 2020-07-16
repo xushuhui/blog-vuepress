@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>mysql进阶（2）影响mysql性能的因素-4 | 徐曙辉个人博客</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/lin-ui-doc/favicon.ico">
+    <script async="true" type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1279053128&amp;web_id=1279053128"></script>
+    <script async="true" type="text/javascript" src="https://hm.baidu.com/hm.js?8628fff92d16599a4cb40c15288bf5e3"></script>
+    <meta name="description" content="徐曙辉个人博客">
+    <link rel="preload" href="/lin-ui-doc/assets/css/0.styles.5b2e7990.css" as="style"><link rel="preload" href="/lin-ui-doc/assets/js/app.91e5cde9.js" as="script"><link rel="preload" href="/lin-ui-doc/assets/js/7.0d93027f.js" as="script"><link rel="preload" href="/lin-ui-doc/assets/js/2.0f22e093.js" as="script"><link rel="preload" href="/lin-ui-doc/assets/js/55.c4e0b43b.js" as="script"><link rel="prefetch" href="/lin-ui-doc/assets/js/10.6b06a6b3.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/11.69eb8c4c.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/12.d5b13078.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/13.a3493870.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/14.d8674657.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/15.885665c0.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/16.0f074169.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/17.5246b0b4.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/18.04eea8ef.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/19.6e0babec.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/20.d2b5874c.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/21.118685cd.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/22.cc2fd8e4.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/23.a5d0558c.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/24.66c8e8b5.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/25.b0f33d37.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/26.56a3c813.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/27.893f3fb5.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/28.60e4abd4.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/29.f6865804.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/3.cff4f793.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/30.e7ba1931.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/31.fb3dc8c1.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/32.349890ca.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/33.e74c2349.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/34.06bf0fe6.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/35.8aac12d8.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/36.96782dc3.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/37.c32a7e9e.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/38.6fe44ff4.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/39.d1a54507.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/4.ed060dcb.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/40.6069edbd.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/41.73fccfb4.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/42.8ce16eb7.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/43.cde80980.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/44.6408f8b7.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/45.250c5cf6.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/46.474a7e2a.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/47.b4287dd0.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/48.30ef8f2b.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/49.c9cb9ea9.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/5.b3409139.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/50.3aca77a9.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/51.49070736.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/52.66717b25.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/53.13f8b933.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/54.51348315.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/56.bf0175d4.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/57.6cc44899.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/58.98dffa61.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/59.25f09e22.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/6.eddec916.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/60.c8c8139f.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/61.35d8660e.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/62.e3f0640e.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/63.99e074f2.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/64.4e8f5d22.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/65.e6a347a8.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/66.1d70b5ba.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/67.341f0650.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/68.d8d07d1c.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/69.a256ae07.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/70.abe4f9f9.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/71.4f42155b.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/72.ca72f84a.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/8.e1c75d2c.js"><link rel="prefetch" href="/lin-ui-doc/assets/js/9.d3a3a228.js">
+    <link rel="stylesheet" href="/lin-ui-doc/assets/css/0.styles.5b2e7990.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/lin-ui-doc/" class="home-link router-link-active"><!----> <span class="site-name">徐曙辉个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/lin-ui-doc/base/" class="nav-link">
+  基础知识
+</a></div><div class="nav-item"><a href="/lin-ui-doc/code/" class="nav-link">
+  编程语言
+</a></div><div class="nav-item"><a href="/lin-ui-doc/database/" class="nav-link router-link-active">
+  数据库
+</a></div><div class="nav-item"><a href="/lin-ui-doc/book.html" class="nav-link">
+  书籍
+</a></div><div class="nav-item"><a href="/lin-ui-doc/about/" class="nav-link">
+  关于我
+</a></div><div class="nav-item"><a href="https://github.com/xushuhui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/lin-ui-doc/base/" class="nav-link">
+  基础知识
+</a></div><div class="nav-item"><a href="/lin-ui-doc/code/" class="nav-link">
+  编程语言
+</a></div><div class="nav-item"><a href="/lin-ui-doc/database/" class="nav-link router-link-active">
+  数据库
+</a></div><div class="nav-item"><a href="/lin-ui-doc/book.html" class="nav-link">
+  书籍
+</a></div><div class="nav-item"><a href="/lin-ui-doc/about/" class="nav-link">
+  关于我
+</a></div><div class="nav-item"><a href="https://github.com/xushuhui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>node</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/lin-ui-doc/database/mysql/mysql基础（1）字段类型.html" class="sidebar-link">mysql基础（1）字段类型</a></li><li><a href="/lin-ui-doc/database/mysql/mysql基础（2）存储引擎.html" class="sidebar-link">mysql基础（2）存储引擎</a></li><li><a href="/lin-ui-doc/database/mysql/mysql基础（3）事务.html" class="sidebar-link">mysql基础（3）事务</a></li><li><a href="/lin-ui-doc/database/mysql/mysql基础（4）执行计划.html" class="sidebar-link">mysql基础（4）执行计划</a></li><li><a href="/lin-ui-doc/database/mysql/mysql基础（5）索引.html" class="sidebar-link">mysql基础（5）索引</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mysql进阶（2）影响mysql性能的因素-4"><a href="#mysql进阶（2）影响mysql性能的因素-4" class="header-anchor">#</a> mysql进阶（2）影响mysql性能的因素-4</h1> <h2 id="数据库服务器参数"><a href="#数据库服务器参数" class="header-anchor">#</a> 数据库服务器参数</h2> <h3 id="获取配置信息路径"><a href="#获取配置信息路径" class="header-anchor">#</a> 获取配置信息路径</h3> <ul><li>命令行参数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>mysqld_safe --datadir=/data/sql_data
+</code></pre></div><ul><li>配置文件</li></ul> <div class="language- extra-class"><pre class="language-text"><code>mysqld --help  --verbose | grep -A 1 'Default options'
+</code></pre></div><h3 id="配置参数作用域"><a href="#配置参数作用域" class="header-anchor">#</a> 配置参数作用域</h3> <ul><li>全局参数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>set global  参数名=参数值
+set @@global.参数名:=参数值
+</code></pre></div><ul><li>会话参数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>set session  参数名=参数值
+set @@session.参数名:=参数值
+</code></pre></div><h3 id="内核相关配置参数"><a href="#内核相关配置参数" class="header-anchor">#</a> 内核相关配置参数</h3> <ul><li>确定可以使用的内存上限</li> <li>确定 MySQL 每个连接使用的内存</li></ul> <div class="language- extra-class"><pre class="language-text"><code>sort_buffer_size
+join_buffer_size
+read_buffer_size
+read_rnd_buffer_size
+</code></pre></div><ul><li>确定需要为操作系统保留多少内存</li> <li>如何为缓冲池分配内存
+缓冲池内存 = 总内存 -（每个线程需要的内存*连接数）- 系统保留内存</li></ul> <div class="language- extra-class"><pre class="language-text"><code>Innodb_buffer_pool_size
+key_buffer_size
+select sum(index_length) from information_schema.tables where engine='myisam'
+</code></pre></div><h3 id="io-相关配置参数"><a href="#io-相关配置参数" class="header-anchor">#</a> IO 相关配置参数</h3> <h4 id="innodb"><a href="#innodb" class="header-anchor">#</a> Innodb</h4> <div class="language- extra-class"><pre class="language-text"><code>Innodb_log_file_size
+Innodb_log_files_in_group
+事务日志总大小 Innodb_log_files_in_group*Innodb_log_file_size
+Innodb_log_buffer_size
+</code></pre></div><ul><li><p>Innodb_flush_log_at_trx_commit
+0: 每秒进行一次，log 写入 cache, 并 flush log 到磁盘
+1:【默认】，每次事务提交，执行 log 写入 cache, 并 flush log 到磁盘
+2: 【建议】每次事务提交，执行 log 写入 cache, 每秒执行一次 flush log 到磁盘</p></li> <li><p>Innodb_flush_method=O_DIRECT</p></li> <li><p>Innodb_file_per_table=1</p></li> <li><p>Innodb_doublewrite=1</p></li></ul> <h4 id="myisam"><a href="#myisam" class="header-anchor">#</a> MyISAM</h4> <ul><li>delay_key_write
+OFF: 每次写操作偶刷新键缓冲中的脏块到磁盘
+ON: 只对建表时候指定了 delay_key_write 选项的表使用延迟刷新
+ALL: 对所有 MyISAM 表都是使用延迟键写入</li></ul> <h3 id="安全相关配置参数"><a href="#安全相关配置参数" class="header-anchor">#</a> 安全相关配置参数</h3> <ul><li>expire_logs_days
+指定自动清理 binlog 天数</li> <li>max_allow_packet
+控制 MySQL 可以接收包的大小</li> <li>skip_name_resolve
+禁用 DNS 查找</li> <li>sysdate_is_now
+确保 sysdate() 返回正确日期</li> <li>read_only
+禁止非 super 权限用户写权限</li> <li>skip-slave_start
+禁用 slave 自动恢复</li> <li>sql_mode
+设置 MySQL 所使用的 SQL 模式</li></ul> <h3 id="其他常用配置参数"><a href="#其他常用配置参数" class="header-anchor">#</a> 其他常用配置参数</h3> <ul><li>sync_binlog
+控制 MySQL 如何向磁盘刷新 binlog</li> <li>tmp_table_size 和 max_heap_table_size
+控制内存临时表大小</li> <li>max_connections
+控制允许的最大连接数</li></ul> <h3 id="数据库结构设计和-sql-优化"><a href="#数据库结构设计和-sql-优化" class="header-anchor">#</a> 数据库结构设计和 SQL 优化</h3> <ul><li>过分的反范式化为表建立太多列</li> <li>过分的范式化造成太多表关联</li> <li>在 OLTP 环境使用不恰当的分区表</li> <li>使用外键保证数据完整性</li></ul> <h2 id="性能优化顺序"><a href="#性能优化顺序" class="header-anchor">#</a> 性能优化顺序</h2> <ul><li>数据库结构设计和 SQL 语句</li> <li>数据库存储引擎的选择和参数配置</li> <li>系统选择和优化</li> <li>硬件升级</li></ul> <h2 id="欢迎扫描下方二维码，个人博客，持续关注："><a href="#欢迎扫描下方二维码，个人博客，持续关注：" class="header-anchor">#</a> 欢迎扫描下方二维码，<a href="https://www.phpst.cn" target="_blank" rel="noopener noreferrer">个人博客<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，持续关注：</h2> <p><img src="https://ww1.sinaimg.cn/large/a616b9a4gy1g4xzv954a4j20760763yo.jpg" alt=""></p> <p>互联网工程师（id:phpstcn），我们一起学习，一起进步</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">7/16/2020, 3:51:42 AM</span></div></footer> <!----> <img src="/lin-ui-doc/assets/img/bottom-logo.385a53c5.png" style="position:absolute;width:135px;left:calc(100% / 2 + 50px);transform:translateX(-50%);"></main></div><div class="global-ui"></div></div>
+    <script src="/lin-ui-doc/assets/js/app.91e5cde9.js" defer></script><script src="/lin-ui-doc/assets/js/7.0d93027f.js" defer></script><script src="/lin-ui-doc/assets/js/2.0f22e093.js" defer></script><script src="/lin-ui-doc/assets/js/55.c4e0b43b.js" defer></script>
+  </body>
+</html>
